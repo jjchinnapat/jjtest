@@ -12,7 +12,8 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v2
-      working-directory : /home/jjchin
+      # working-directory : ..
+      run: cd..
     - run: |
         docker build -f jjtest/Dockerfile \
         -t ghcr.io/jjchinnapat/imageflutterweb:latest --build-arg GIT_PAT=${{ secrets.GIT_PAT }} .

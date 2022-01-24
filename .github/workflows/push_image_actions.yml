@@ -13,8 +13,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       # working-directory : ..
-      run: cd..
+      # run: cd..
     - run: |
+        pwd
         docker build -f jjtest/Dockerfile \
         -t ghcr.io/jjchinnapat/imageflutterweb:latest --build-arg GIT_PAT=${{ secrets.GIT_PAT }} .
         echo ${{ secrets.GIT_PAT }} | docker login ghcr.io -u jjchinnapat --password-stdin

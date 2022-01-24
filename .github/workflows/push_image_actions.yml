@@ -16,7 +16,7 @@ jobs:
       # run: cd..
     - run: |
         cd /home/jjchin
-        ll
+        ls -la
       #  docker build -f /home/jjchin/actions-runner/test/jjtest/jjtest/Dockerfile \
       #  -t ghcr.io/jjchinnapat/imageflutterweb:latest --build-arg GIT_PAT=${{ secrets.GIT_PAT }} .
       #  echo ${{ secrets.GIT_PAT }} | docker login ghcr.io -u jjchinnapat --password-stdin

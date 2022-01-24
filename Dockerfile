@@ -5,7 +5,7 @@ RUN mkdir /app/
 COPY . /app/
 # COPY /.pub-cache /root/.pub-cache
 WORKDIR /app/
-RUN flutter pub get
+RUN flutter build web
 
 FROM nginx:1.21.1-alpine
 COPY --from=builder /app/build/web /usr/share/nginx/html

@@ -2,8 +2,8 @@ FROM imageflutterweb as builder
 
 RUN mkdir /app/
 
-COPY . /app/
-# COPY /.pub-cache /root/.pub-cache
+COPY /jjtest /app/
+COPY /.pub-cache /root/.pub-cache
 WORKDIR /app/
 RUN flutter build web
 

@@ -3,7 +3,7 @@ FROM imageflutterweb as builder
 RUN mkdir /app/
 
 COPY /jjtest/test /app/
-COPY /.pub-cache /root/.pub-cache
+# COPY /.pub-cache /root/.pub-cache
 WORKDIR /app/
 RUN flutter pub get
 

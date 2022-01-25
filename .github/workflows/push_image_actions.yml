@@ -35,7 +35,7 @@ jobs:
         files: |
           pubspec.yaml
     - name: pubspec.yaml changed
-      if: env.GIT_DIFF
+      if: steps.verify_changed_files.output.diff
       run: | 
         docker build -f update-imageflutterpubget/Dockerfile -t imageflutterpubget .
 
@@ -45,4 +45,3 @@ jobs:
     #     -t ghcr.io/jjchinnapat/imageflutterweb:latest --build-arg GIT_PAT=${{ secrets.GIT_PAT }} .
     #     echo ${{ secrets.GIT_PAT }} | docker login ghcr.io -u jjchinnapat --password-stdin
     #     docker push ghcr.io/jjchinnapat/imageflutterweb:latest
-# 

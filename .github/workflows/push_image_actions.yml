@@ -32,6 +32,7 @@ jobs:
     # - name: build_push
     - uses: actions/checkout@v2
     - run: |
+        pwd
         docker build \
         -t ghcr.io/jjchinnapat/imageflutterweb:latest --build-arg GIT_PAT=${{ secrets.GIT_PAT }} .
         echo ${{ secrets.GIT_PAT }} | docker login ghcr.io -u jjchinnapat --password-stdin

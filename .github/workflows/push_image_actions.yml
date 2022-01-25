@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  run :
+  push :
     runs-on: self-hosted
     steps:
     # - name: Get changed files
@@ -28,9 +28,10 @@ jobs:
     #   run: | 
     #     docker build -f update-imageflutterpubget/Dockerfile -t imageflutterpubget .
 
-    - name: Verify Changed pubspec.yaml files
-      uses: technote-space/get-diff-action@v6
-      id: verify_changed_files
+    # - name: Verify Changed pubspec.yaml files
+    - uses: actions/checkout@v2
+    - uses: technote-space/get-diff-action@v6
+      # id: verify_changed_files
       with:
         files: |
           pubspec.lock

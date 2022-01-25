@@ -27,12 +27,11 @@ jobs:
     - name: pubspec.yaml changed
       if: steps.verify_changed_files.outputs.files_changed == 'true'
       run: | 
-        docker build -f /home/jjchin/actions-runner/test/jjtest/jjtest/update-imageflutterpubget/Dockerfile -t imageflutterpubget .
+        docker build -f update-imageflutterpubget/Dockerfile -t imageflutterpubget .
 
     # - name: build_push
     - uses: actions/checkout@v2
     - run: |
-        pwd
         docker build \
         -t ghcr.io/jjchinnapat/imageflutterweb:latest --build-arg GIT_PAT=${{ secrets.GIT_PAT }} .
         echo ${{ secrets.GIT_PAT }} | docker login ghcr.io -u jjchinnapat --password-stdin

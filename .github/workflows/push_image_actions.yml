@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  eslint :
+  run :
     runs-on: self-hosted
     steps:
     # - name: Get changed files
@@ -33,7 +33,7 @@ jobs:
       id: verify_changed_files
       with:
         files: |
-          pubspec.yaml
+          pubspec.lock
     - name: pubspec.yaml changed
       if: env.GIT_DIFF
       run: | 

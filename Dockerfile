@@ -20,4 +20,3 @@ COPY --from=builder /app/build/web /usr/share/nginx/html
 # mount while run docker OK
 # ln -s /home/jjchin/.pub-cache /home/jjchin/testaction/.pub-cache not work
 # cp -r /home/jjchin/.pub-cache /home/jjchin/testaction
-# 

@@ -34,7 +34,7 @@ jobs:
       # id: verify_changed_files
       with:
         files: |
-          pubspec.lock
+          pubspec.yaml
     - name: pubspec.yaml changed
       if: env.MATCHED_FILES
       run: | 

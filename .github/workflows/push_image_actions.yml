@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  push :
+  eslint :
     runs-on: self-hosted
     steps:
     # - name: Get changed files
@@ -35,7 +35,7 @@ jobs:
         files: |
           pubspec.yaml
     - name: pubspec.yaml changed
-      if: steps.verify_changed_files.output.diff
+      if: env.GIT_DIFF
       run: | 
         docker build -f update-imageflutterpubget/Dockerfile -t imageflutterpubget .
 

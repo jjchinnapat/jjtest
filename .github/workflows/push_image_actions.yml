@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  check_build_push:
+  push_core_image :
     runs-on: self-hosted
     steps:
     # - name: Get changed files

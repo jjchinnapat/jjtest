@@ -24,6 +24,7 @@ jobs:
       with:
         files: |
           pubspec.yaml
+    - name: pubspec.yaml changed
       if: steps.verify_changed_files.outputs.files_changed == 'true'
       run: | 
         docker build -f /home/jjchin/actions-runner/test/jjtest/jjtest/update-imageflutterpubget/Dockerfile -t imageflutterpubget .

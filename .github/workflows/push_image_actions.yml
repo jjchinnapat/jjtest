@@ -36,7 +36,7 @@ jobs:
         files: |
           pubspec.lock
     - name: pubspec.yaml changed
-      if: env.GIT_DIFF
+      if: env.MATCHED_FILES
       run: | 
         docker build -f update-imageflutterpubget/Dockerfile -t imageflutterpubget .
 

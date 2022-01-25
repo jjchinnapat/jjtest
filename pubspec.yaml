@@ -34,9 +34,9 @@ dependencies:
   decimal: ^1.2.0
   directed_graph: ^0.3.4
   dotted_border: ^2.0.0-nullsafety.0
-  easy_localization: ^3.0.0
+  # easy_localization: ^3.0.0
   flutter_dotenv: ^5.0.2
-  flutter_dropzone: ^2.0.1
+  # flutter_dropzone: ^2.0.1
   flutter_local_notifications: ^5.0.0
   get: ^4.3.8
   graphql: ^5.0.0-nullsafety.1
@@ -53,6 +53,7 @@ dependencies:
   timezone: ^0.7.0-nullsafety.0
   universal_html: ^2.0.8
   url_strategy: ^0.2.0
+  # beamer: ^1.2.0
 
 
   # The following adds the Cupertino Icons font to your application.

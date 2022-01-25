@@ -1,4 +1,4 @@
-FROM imageflutterpubget  as builder
+FROM imageflutterpubget as builder
 
 RUN mkdir /app/
 COPY . /app/

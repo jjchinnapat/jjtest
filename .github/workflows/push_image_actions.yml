@@ -40,9 +40,9 @@ jobs:
       run: | 
         docker build -f update-imageflutterpubget/Dockerfile -t imageflutterpubget .
 
-    # - uses: actions/checkout@v2
-    # - run: |
-    #     docker build \
-    #     -t ghcr.io/jjchinnapat/imageflutterweb:latest --build-arg GIT_PAT=${{ secrets.GIT_PAT }} .
-    #     echo ${{ secrets.GIT_PAT }} | docker login ghcr.io -u jjchinnapat --password-stdin
-    #     docker push ghcr.io/jjchinnapat/imageflutterweb:latest
+    - uses: actions/checkout@v2
+    - run: |
+        docker build \
+        -t ghcr.io/jjchinnapat/imageflutterweb:latest --build-arg GIT_PAT=${{ secrets.GIT_PAT }} .
+        echo ${{ secrets.GIT_PAT }} | docker login ghcr.io -u jjchinnapat --password-stdin
+        docker push ghcr.io/jjchinnapat/imageflutterweb:latest

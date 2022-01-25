@@ -7,7 +7,6 @@ on:
     branches: [ master ]
 
 jobs:
-
   push_core_image :
     runs-on: self-hosted
     steps:
@@ -29,10 +28,6 @@ jobs:
       if: steps.verify_changed_files.outputs.files_changed == 'true'
       run: | 
         docker build -f /home/jjchin/actions-runner/test/jjtest/jjtest/update-imageflutterpubget/Dockerfile -t imageflutterpubget .
-
-
-
-
 
     - name: build_push
     - uses: actions/checkout@v2

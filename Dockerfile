@@ -7,7 +7,7 @@ RUN flutter build web
 
 # COPY /home/jjchin/actions-runner/test/jjtest/jjtest /app/
 # COPY .pub-cache /root/.pub-cache
-WORKDIR /app/
+# WORKDIR /app/
 
 # COPY pubspec.yaml .
 # RUN flutter pub get

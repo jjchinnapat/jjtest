@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  push_core_image :
+  push :
     runs-on: self-hosted
     steps:
     # - name: Get changed files
@@ -18,13 +18,13 @@ jobs:
     #   run: docker build -f /home/jjchin/actions-runner/test/jjtest/jjtest/update-imageflutterpubget/Dockerfile \
     #   -t imageflutterpubget .
 
-      name: Verify Changed files
+    - name: Verify Changed files
       uses: tj-actions/verify-changed-files@v8
       id: verify_changed_files
       with:
         files: |
           pubspec.yaml
-      name: pubspec.yaml changed
+    - name: pubspec.yaml changed
       if: steps.verify_changed_files.outputs.files_changed == 'true'
       run: | 
         docker build -f /home/jjchin/actions-runner/test/jjtest/jjtest/update-imageflutterpubget/Dockerfile -t imageflutterpubget .

@@ -29,8 +29,8 @@ jobs:
     #     docker build -f update-imageflutterpubget/Dockerfile -t imageflutterpubget .
 
     # - name: Verify Changed pubspec.yaml files
-    - name: set file check
-      run : ls
+    # - name: set file check
+    #   run : ls
     - uses: actions/checkout@v2
     - uses: technote-space/get-diff-action@v6
       with:
